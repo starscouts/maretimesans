@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gen</title>
+    <style>
+        @font-face {
+            font-family: "FONT";
+            src: url("../export.otf");
+        }
+
+        html, body {
+            background-color: #111111;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: grid; box-sizing: border-box; grid-template-columns: repeat(12, 1fr); border-collapse: collapse; grid-gap: 10px;" id="grid"></div>
+    <script>
+        const fs = require('fs');
+
+        let status = fs.readFileSync("../status.txt").toString().trim().split("\n");
+        let all = status[1].split("");
+        let current = status[0].split("");
+
+        for (let item of all) {
+            document.getElementById("grid").innerHTML += `
+            <div style="${!current.includes(item) ? "box-shadow: 0 0 0 2px red; border: 1px solid rgba(255, 0, 0, .5);" : "border: 1px solid rgba(255, 255, 255, .5);"} height: 56px; border-collapse: collapse; color: white;">
+                <span style="font-family: sans-serif; position: absolute; margin-left: 2px; opacity: .5; font-size: 14px;">${item}</span>${current.includes(item) ? `
+                    <div style="font-family: 'FONT', monospace; height: 56px; font-size: 56px; text-align: center;">${item}</div>
+                ` : ""}
+            </div>
+            `;
+        }
+    </script>
+</body>
+</html>
