@@ -67,7 +67,7 @@ The assets used in this font are inspired by Hasbro's assets for My Little Pony,
 As for the font itself, you can use it freely for all your hobby projects and not-for-profit projects; however, please avoid using it in commercial settings. Also avoid claiming it as your own or removing copyright notices in the font file.
 
 ## Troubleshooting
-If you encounter an issue with this font, uninstall it and reinstall it. If the issue persists, [contact the developers](https://equestria.horse/contact).
+If you encounter an issue with this font, uninstall it and reinstall it. If the issue persists, [contact the developers](https://equestria.dev/contact).
 
 ## Get involved
 If you want to add new characters to the font, report/fix issues, or just about anything, please create an issue on this repository.
